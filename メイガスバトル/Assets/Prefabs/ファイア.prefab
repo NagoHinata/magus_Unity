@@ -514,6 +514,8 @@ GameObject:
   - component: {fileID: 1541180964143934633}
   - component: {fileID: 921818253890227461}
   - component: {fileID: 7857262626088186454}
+  - component: {fileID: 6302259445609969515}
+  - component: {fileID: -1098421713559376258}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30A2"
   m_TagString: Untagged
@@ -530,7 +532,7 @@ RectTransform:
   m_GameObject: {fileID: 5854793366072558984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6807794186445492197}
@@ -576,6 +578,31 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &6302259445609969515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5854793366072558984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3a1dbc0189cfa4c8695c551364a631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardParent: {fileID: 0}
+--- !u!225 &-1098421713559376258
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5854793366072558984}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5931289423042796965
 GameObject:
   m_ObjectHideFlags: 0

@@ -807,11 +807,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: e8f2b28a-7ecd-49da-80df-babe2100b2fe
+  cloudProjectId: 9cefabd2-795e-4a07-bfbb-b41f3ae1772a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: "\u30E1\u30A4\u30AC\u30B9_\u30AB\u30FC\u30C9"
-  organizationId: hinatanago
+  projectName: nagokasu
+  organizationId: iwa_saki
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
