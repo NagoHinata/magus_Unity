@@ -1232,14 +1232,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 767170715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2055424b847a44387d73bab2751e6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 88ab394ad7e9a36408fedb7f6baf786d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 0}
-  playerHand: {fileID: 0}
-  penemyField: {fileID: 0}
-  playerField: {fileID: 0}
-  TurnEnd: {fileID: 0}
+  cardPrefab: {fileID: 1162705900}
+  playerHand: {fileID: 1468731699}
+  penemyField: {fileID: 1356153140}
+  playerField: {fileID: 1234525062}
+  TurnEnd: {fileID: 1225379600}
 --- !u!4 &767170717
 Transform:
   m_ObjectHideFlags: 0
@@ -1947,6 +1947,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160503109}
   m_CullTransparentMesh: 1
+--- !u!1 &1162705900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5854793366072558984, guid: 8988f4b5aa7a479478b7dcd09edb64cd, type: 3}
+  m_PrefabInstance: {fileID: 1698944512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225379599
 GameObject:
   m_ObjectHideFlags: 0
