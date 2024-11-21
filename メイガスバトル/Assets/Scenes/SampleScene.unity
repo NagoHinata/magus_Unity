@@ -1237,6 +1237,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 5854793366072558984, guid: 8988f4b5aa7a479478b7dcd09edb64cd, type: 3}
   playerHand: {fileID: 1468731699}
+  TurnEnd: {fileID: 1225379600}
+  playerField: {fileID: 1234525062}
+  penemyField: {fileID: 1356153140}
 --- !u!4 &767170717
 Transform:
   m_ObjectHideFlags: 0
