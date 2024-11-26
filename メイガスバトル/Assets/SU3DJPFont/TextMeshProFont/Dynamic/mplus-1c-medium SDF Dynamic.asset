@@ -242,6 +242,14 @@ MonoBehaviour:
       m_LigatureGlyphID: 2960
     - m_ComponentGlyphIDs: 790b0000530b0000
       m_LigatureGlyphID: 2938
+    - m_ComponentGlyphIDs: 670b0000540b0000
+      m_LigatureGlyphID: 8361
+    - m_ComponentGlyphIDs: 670b0000530b0000
+      m_LigatureGlyphID: 2920
+    - m_ComponentGlyphIDs: 820b0000540b0000
+      m_LigatureGlyphID: 8367
+    - m_ComponentGlyphIDs: 820b0000530b0000
+      m_LigatureGlyphID: 2947
     m_GlyphPairAdjustmentRecords:
     - m_FirstAdjustmentRecord:
         m_GlyphIndex: 66
