@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleOpsyon:MonoBehaviour
+public class BottonOpsyon : MonoBehaviour
 {
-    public void Onclick()
+
+    
+
+    public void OnclickToOption()
     {
         SceneManager.LoadScene("Option");
+       
     }
     
 }
