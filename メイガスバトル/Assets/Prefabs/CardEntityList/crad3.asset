@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33268d26e84f4742806d89780b9f8b9, type: 3}
+  m_Name: crad3
+  m_EditorClassIdentifier: 
+  cardId: 3
+  name: "\u964D\u970A\u8853"
+  cost: 3
+  power: 0
+  icon: {fileID: 8371111340615978865, guid: ae7f1adb1adbc3b47aa6238373569f64, type: 3}
