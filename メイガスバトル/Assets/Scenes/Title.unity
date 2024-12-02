@@ -950,8 +950,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1630531169}
-        m_TargetAssemblyTypeName: TitleOpsyon, Assembly-CSharp
-        m_MethodName: Onclick
+        m_TargetAssemblyTypeName: BottonOpsyon, Assembly-CSharp
+        m_MethodName: OnclickToOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
