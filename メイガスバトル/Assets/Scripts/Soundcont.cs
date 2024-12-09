@@ -1,75 +1,50 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Soundcont : MonoBehaviour
 {
+    private static Soundcont instance;
+    public float volume;
+    public Scrollbar scrollbar;
 
-    [SerializeField]
-    AudioSource bgmAudioSource;
-    [SerializeField]
-    AudioSource seAudioSource;
 
-    public float BgmVolume
+    private void Awake()
     {
-        get
+        if (instance == null)
         {
-            return bgmAudioSource.volume;
+            // このオブジェクトがシングルトンのインスタンスとして設定される
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        set
+        else
         {
-            bgmAudioSource.volume = Mathf.Clamp01(value);
-        }
-    }
-
-    public float SeVolume
-    {
-        get
-        {
-            return seAudioSource.volume;
-        }
-        set
-        {
-            seAudioSource.volume = Mathf.Clamp01(value);
+            // 既にインスタンスが存在する場合、このオブジェクトを破棄
+            Destroy(gameObject);
         }
     }
 
     void Start()
     {
-        GameObject soundManager = CheckOtherSoundManager();
-        bool checkResult = soundManager != null && soundManager != gameObject;
-
-        if (checkResult)
-        {
-            Destroy(gameObject);
-        }
-
         DontDestroyOnLoad(gameObject);
+        //アタッチされているAudioSource取得
+        AudioSource audio = GetComponent<AudioSource>();
+        volume = audio.volume;
+        float currentValue = scrollbar.value;
+        scrollbar.value = audio.volume;
+        Debug.Log("Scrollbarの現在の値: " + currentValue);
+
     }
 
-    GameObject CheckOtherSoundManager()
+    public void OnChangeVolume()
     {
-        return GameObject.FindGameObjectWithTag("SoundManager");
-    }
-
-    public void PlayBgm(AudioClip clip)
-    {
-        bgmAudioSource.clip = clip;
-
-        if (clip == null)
-        {
-            return;
-        }
-
-        bgmAudioSource.Play();
-    }
-
-    public void PlaySe(AudioClip clip)
-    {
-        if (clip == null)
-        {
-            return;
-        }
-
-        seAudioSource.PlayOneShot(clip);
+        Debug.Log("音量変更");
+        float currentValue = scrollbar.value;
+        Debug.Log("Scrollbarの現在の値: " + currentValue);
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.volume = currentValue;
+        
     }
 
 }
