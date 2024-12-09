@@ -34,6 +34,12 @@ public class GameManager : MonoBehaviour
         CardController card4 = Instantiate(cardPrefab, playerHand);
         card4.Init(1);
     }
+
+    void CreateCard(int cardID, Transform place)
+    {
+        CardController card = Instantiate(cardPrefab, place);
+        card.Init(cardID);
+    }
     /*
     void Start()
     {

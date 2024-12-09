@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f33268d26e84f4742806d89780b9f8b9, type: 3}
-  m_Name: crad1
+  m_Name: Card2
   m_EditorClassIdentifier: 
-  cardId: 1
-  name: "\u30D5\u30A1\u30A4\u30A2"
-  cost: 1
+  cardId: 2
+  name: "\u5F37\u596A\u546A\u6CD5"
+  cost: 2
   power: 0
-  icon: {fileID: -2071446188816700743, guid: 035c3875489489d44ba3d5fe5672f9b5, type: 3}
+  icon: {fileID: -970202439808245365, guid: a01c3edffcf860c45b643610c05daf03, type: 3}

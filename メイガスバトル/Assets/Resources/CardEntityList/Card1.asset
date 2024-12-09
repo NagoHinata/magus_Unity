@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: DefaultVolumeProfile
+  m_Script: {fileID: 11500000, guid: f33268d26e84f4742806d89780b9f8b9, type: 3}
+  m_Name: Card1
   m_EditorClassIdentifier: 
-  components: []
+  cardId: 1
+  name: "\u30D5\u30A1\u30A4\u30A2"
+  cost: 1
+  power: 0
+  icon: {fileID: -2071446188816700743, guid: 035c3875489489d44ba3d5fe5672f9b5, type: 3}
