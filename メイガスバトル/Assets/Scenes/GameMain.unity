@@ -1355,9 +1355,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 767170715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2055424b847a44387d73bab2751e6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 88ab394ad7e9a36408fedb7f6baf786d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 5004958250765077487, guid: 16033fa7e5cfc9a4198ab29cdce2ec4f, type: 3}
+  playerHand: {fileID: 1468731699}
+  playerField: {fileID: 1234525062}
+  enemyField: {fileID: 1356153140}
 --- !u!4 &767170717
 Transform:
   m_ObjectHideFlags: 0
@@ -1601,7 +1605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541180964143934633, guid: 8988f4b5aa7a479478b7dcd09edb64cd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1541180964143934633, guid: 8988f4b5aa7a479478b7dcd09edb64cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -1641,11 +1645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541180964143934633, guid: 8988f4b5aa7a479478b7dcd09edb64cd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1970
+      value: 1321.15
       objectReference: {fileID: 0}
     - target: {fileID: 1541180964143934633, guid: 8988f4b5aa7a479478b7dcd09edb64cd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -683.1611
+      value: -130.95001
       objectReference: {fileID: 0}
     - target: {fileID: 1541180964143934633, guid: 8988f4b5aa7a479478b7dcd09edb64cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4226,6 +4230,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 1086759654}
   - {fileID: 2090128356}
   - {fileID: 767170717}
-  - {fileID: 1086759654}

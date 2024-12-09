@@ -9,9 +9,32 @@ public class GameManager : MonoBehaviour
     [SerializeField] CardController cardPrefab;
     [SerializeField] Transform playerHand, playerField, enemyField;
 
-    bool isPlayerTurn = true; //
-    List<int> deck = new List<int>() { 1, 2, 3, 1, 1, 2, 2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };  //
+    bool isPlayerTurn = true;
+    enum Crad
+    {
+        Card1,
+        Card2,
+        Card3,
+    }
+    //List<int> deck = new List<int>() { 1, 2, 3, 1, 1, 2, 2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };  //
 
+    void Start()
+    {
+        StartGame();
+    }
+
+    void StartGame()
+    {
+        CardController card = Instantiate(cardPrefab, playerHand);
+        card.Init(1);
+        CardController card2 = Instantiate(cardPrefab, playerHand);
+        card2.Init(2);
+        CardController card3 = Instantiate(cardPrefab, playerHand);
+        card3.Init(2);
+        CardController card4 = Instantiate(cardPrefab, playerHand);
+        card4.Init(1);
+    }
+    /*
     void Start()
     {
         StartGame();
@@ -25,6 +48,7 @@ public class GameManager : MonoBehaviour
         // ターンの決定
         TurnCalc();
     }
+
 
     void CreateCard(int cardID, Transform place)
     {
@@ -87,4 +111,5 @@ public class GameManager : MonoBehaviour
 
         ChangeTurn(); // ターンエンドする
     }
+    */
 }
