@@ -1362,6 +1362,10 @@ MonoBehaviour:
   playerHand: {fileID: 1468731699}
   playerField: {fileID: 1234525062}
   enemyField: {fileID: 1356153140}
+  playerManaPointText: {fileID: 1160503111}
+  playerDefaultManaPointText: {fileID: 0}
+  playerManaPoint: 1
+  playerDefaultManaPoint: 1
 --- !u!4 &767170717
 Transform:
   m_ObjectHideFlags: 0
