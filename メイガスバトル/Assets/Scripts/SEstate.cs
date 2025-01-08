@@ -23,7 +23,7 @@ public class SEstate : MonoBehaviour
     {
     }
 
-    public void ButtonClick()
+    /*public void ButtonClick()
     {
         button_AudioSource.PlayOneShot(button_AudioSource.clip);
 
@@ -35,7 +35,8 @@ public class SEstate : MonoBehaviour
         
         yield return new WaitWhile(() => audioSource.isPlaying);
 
-    }
+    }*/
+
 
 
 }
