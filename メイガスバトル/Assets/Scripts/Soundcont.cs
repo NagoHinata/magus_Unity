@@ -8,6 +8,7 @@ public class Soundcont : MonoBehaviour
     private static Soundcont instance;
     public float volume;
     public Scrollbar scrollbar;
+    Scrollbar scrollbarname;
 
 
     private void Awake()
@@ -27,6 +28,7 @@ public class Soundcont : MonoBehaviour
 
     void Start()
     {
+
         DontDestroyOnLoad(gameObject);
         //アタッチされているAudioSource取得
         AudioSource audio = GetComponent<AudioSource>();
