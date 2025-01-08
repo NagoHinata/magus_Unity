@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] CardController cardPrefab;
     [SerializeField] Transform playerHand, playerField, enemyField;
+    [SerializeField] TextMeshProUGUI playerManaPointText;
+    [SerializeField] TextMeshProUGUI playerDefaultManaPointText;
+
+    public int playerManaPoint; // 使用すると減るマナポイント
+    public int playerDefaultManaPoint; // 毎ターン増えていくベースのマナポイント
 
     bool isPlayerTurn = true; //
     List<int> deck = new List<int>() { 1, 2, 3, 1, 1, 2, 2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };  //
@@ -23,6 +30,12 @@ public class GameManager : MonoBehaviour
 
         // ターンの決定
         TurnCalc();
+    }
+
+    void ShowManaPoint() // マナポイントを表示する
+    {
+        playerManaPointText.text = playerManaPoint.ToString()+" / マナ";
+        //playerDefaultManaPointText.text = playerDefaultManaPoint.ToString();
     }
 
     void CreateCard(int cardID, Transform place)
@@ -76,6 +89,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Playerのターン");
 
         DrawCard(playerHand); // 手札を一枚加える
+
+        playerManaPoint++;
+        ShowManaPoint();
     }
 
     void EnemyTurn()
