@@ -23,8 +23,23 @@ public class GameManager : MonoBehaviour
         StartGame();
     }
 
+
+    public static GameManager instance;
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     void StartGame() // 初期値の設定 
     {
+        /// マナの初期値設定 ///
+        playerManaPoint = 1;
+        playerDefaultManaPoint = 1;
+        ShowManaPoint();
+
         // 初期手札を配る
         SetStartHand();
 
@@ -36,6 +51,32 @@ public class GameManager : MonoBehaviour
     {
         playerManaPointText.text = playerManaPoint.ToString()+" / マナ";
         //playerDefaultManaPointText.text = playerDefaultManaPoint.ToString();
+    }
+
+    public void ReduceManaPoint(int cost) // コストの分、マナポイントを減らす
+    {
+        playerManaPoint -= cost;
+        ShowManaPoint();
+
+        SetCanUsePanelHand();
+    }
+
+    void SetCanUsePanelHand() // 手札のカードを取得して、使用可能なカードにCanUseパネルを付ける
+    {
+        CardController[] playerHandCardList = playerHand.GetComponentsInChildren<CardController>();
+        foreach (CardController card in playerHandCardList)
+        {
+            if (card.model.cost <= playerManaPoint)
+            {
+                card.model.canUse = true;
+                card.view.SetCanUsePanel(card.model.canUse);
+            }
+            else
+            {
+                card.model.canUse = false;
+                card.view.SetCanUsePanel(card.model.canUse);
+            }
+        }
     }
 
     void CreateCard(int cardID, Transform place)
@@ -52,13 +93,23 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // デッキの一番上のカードを抜き取り、手札に加える
-        int cardID = deck[0];
-        deck.RemoveAt(0);
-        CreateCard(cardID, hand);
+        /*CardController[] playerHandCardList = playerHand.GetComponentsInChildren();
+
+        if (playerHandCardList.Length < 9)
+        {
+            // デッキの一番上のカードを抜き取り、手札に加える
+            int cardID = deck[0];
+            deck.RemoveAt(0);
+            CreateCard(cardID, hand);
+        }
+
+        SetCanUsePanelHand();
+        */
     }
 
-    void SetStartHand() // 手札を3枚配る
+
+
+        void SetStartHand() // 手札を3枚配る
     {
         for (int i = 0; i < 3; i++)
         {

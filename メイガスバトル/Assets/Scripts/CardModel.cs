@@ -12,6 +12,8 @@ public class CardModel
     public int power;
     public Sprite icon;
 
+    public bool canUse = false;
+
     public CardModel(int cardID)
     {
         CardEntity cardEntity = Resources.Load<CardEntity>("CardEntityList/Card" + cardID);
