@@ -15,10 +15,11 @@ public class GameManager : MonoBehaviour
     public int playerManaPoint; // 使用すると減るマナポイント
     public int playerDefaultManaPoint; // 毎ターン増えていくベースのマナポイント
 
-    bool isPlayerTurn = true; //
-    List<int> deck = new List<int>() { 1, 2, 3, 1, 1, 2, 2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };  //
+    bool isPlayerTurn = true; // プレイヤーターンのフラグ
+    List<int> deck = new List<int>() { 1, 2, 3, 1, 1, 2, 2, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };  // 仮のデッキリスト
+    //List&lt;int> deck = new List&lt;int>() { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2 };
 
-    void Start()
+void Start()
     {
         StartGame();
     }
@@ -53,10 +54,10 @@ public class GameManager : MonoBehaviour
         //playerDefaultManaPointText.text = playerDefaultManaPoint.ToString();
     }
 
-    public void ReduceManaPoint(int cost) // コストの分、マナポイントを減らす
+    public void ReduceManaPoint(int cost) // カード使用時、コスト分マナポイントを減らす処理
     {
-        playerManaPoint -= cost;
-        ShowManaPoint();
+        playerManaPoint -= cost;　// コストの分、マナポイントを減らす
+        ShowManaPoint();　　　　　// マナの表示
 
         SetCanUsePanelHand();
     }
@@ -69,12 +70,12 @@ public class GameManager : MonoBehaviour
             if (card.model.cost <= playerManaPoint)
             {
                 card.model.canUse = true;
-                card.view.SetCanUsePanel(card.model.canUse);
+                card.view.SetCanUsePanel(card.model.canUse); // 緑の枠線を付ける
             }
             else
             {
                 card.model.canUse = false;
-                card.view.SetCanUsePanel(card.model.canUse);
+                card.view.SetCanUsePanel(card.model.canUse); // 緑の枠線を消す
             }
         }
     }
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        /*CardController[] playerHandCardList = playerHand.GetComponentsInChildren();
+        CardController[] playerHandCardList = playerHand.GetComponentsInChildren<CardController>();
 
         if (playerHandCardList.Length < 9)
         {
@@ -104,7 +105,6 @@ public class GameManager : MonoBehaviour
         }
 
         SetCanUsePanelHand();
-        */
     }
 
 
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void TurnCalc() // ターンを管理する
+    void TurnCalc() // ターンの切り替え管理
     {
         if (isPlayerTurn)
         {
@@ -139,17 +139,17 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Playerのターン");
 
-        DrawCard(playerHand); // 手札を一枚加える
+        DrawCard(playerHand); // 手札を一枚ドローする
 
-        playerManaPoint++;
-        ShowManaPoint();
+        playerManaPoint++; // ターン開始時マナを1増やす
+        ShowManaPoint();   // マナの数字を表示する
     }
 
     void EnemyTurn()
     {
         Debug.Log("Enemyのターン");
 
-        CreateCard(1, enemyField); // カードを召喚
+        CreateCard(1, enemyField); // カードをフィールドへ出す
 
         ChangeTurn(); // ターンエンドする
     }
