@@ -22,7 +22,7 @@ public class CardController : MonoBehaviour
 
     public void DropField()
     {
-        GameManager.instance.ReduceManaPoint(model.cost);
+        GameManager.instance.ReduceManaPoint(model.cost); // ƒ}ƒi‚Ìˆ—
         model.canUse = false;
         view.SetCanUsePanel(model.canUse); // o‚·‚Æ‚«CanUsePanel‚ğÁ‚·
     }
