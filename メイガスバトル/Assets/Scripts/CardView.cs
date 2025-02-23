@@ -17,9 +17,10 @@ public class CardView : MonoBehaviour
         costText.text = cardModel.cost.ToString();
         iconImage.sprite = cardModel.icon;
     }
-
+    /*
     public void SetCanUsePanel(bool flag)
     {
         canUsePanel.SetActive(flag);
     }
+    */
 }

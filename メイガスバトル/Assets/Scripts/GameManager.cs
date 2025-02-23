@@ -59,9 +59,9 @@ void Start()
         playerManaPoint -= cost;　// コストの分、マナポイントを減らす
         ShowManaPoint();　　　　　// マナの表示
 
-        SetCanUsePanelHand();
+        //SetCanUsePanelHand();
     }
-
+    /*
     void SetCanUsePanelHand() // 手札のカードを取得して、使用可能なカードにCanUseパネルを付ける
     {
         CardController[] playerHandCardList = playerHand.GetComponentsInChildren<CardController>();
@@ -79,6 +79,7 @@ void Start()
             }
         }
     }
+    */
 
     void CreateCard(int cardID, Transform place)
     {
@@ -98,13 +99,13 @@ void Start()
 
         if (playerHandCardList.Length < 9)
         {
-            // デッキの一番上のカードを抜き取り、手札に加える
+            // デッキの一番上のカードを取り、手札に加える
             int cardID = deck[0];
             deck.RemoveAt(0);
             CreateCard(cardID, hand);
         }
 
-        SetCanUsePanelHand();
+        //SetCanUsePanelHand();
     }
 
 
@@ -149,7 +150,12 @@ void Start()
     {
         Debug.Log("Enemyのターン");
 
+        CardController[] enemyFieldCardList = enemyField.GetComponentsInChildren<CardController>();
+
+        if (enemyFieldCardList.Length < 5)
+        { 
         CreateCard(1, enemyField); // カードをフィールドへ出す
+        }
 
         ChangeTurn(); // ターンエンドする
     }
