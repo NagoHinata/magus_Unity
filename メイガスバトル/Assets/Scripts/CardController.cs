@@ -24,6 +24,6 @@ public class CardController : MonoBehaviour
     {
         GameManager.instance.ReduceManaPoint(model.cost); // マナの処理
         model.canUse = false;
-        view.SetCanUsePanel(model.canUse); // 出すときCanUsePanelを消す
+        //view.SetCanUsePanel(model.canUse); // 出すときにCanUsePanelを消す
     }
 }

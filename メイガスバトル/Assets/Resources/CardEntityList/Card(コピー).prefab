@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   view: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &8167259982396569673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +623,8 @@ MonoBehaviour:
   attributeText: {fileID: 5303878587650534734}
   costText: {fileID: 4386033662972343295}
   iconImage: {fileID: 3503280602554819700}
+  canAttakPanel: {fileID: 0}
+  canUsePanel: {fileID: 0}
 --- !u!225 &-3293909970676629723
 CanvasGroup:
   m_ObjectHideFlags: 0
