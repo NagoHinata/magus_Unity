@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeSelect : MonoBehaviour
 {
-    public void OnClick() // ターンエンドボタンにつける処理
+    public void OnClick() // ボタンにつける処理
     {
         SceneManager.LoadScene("Select");
     }
