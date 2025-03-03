@@ -14,7 +14,6 @@ public class Soundcont : MonoBehaviour
     private static Soundcont instance;
     public float volume;
     public Scrollbar scrollbar;
-    Scrollbar scrollbarname;
 
 
     private void Awake()
@@ -30,6 +29,14 @@ public class Soundcont : MonoBehaviour
             // 既にインスタンスが存在する場合、このオブジェクトを破棄
             Destroy(gameObject);
         }
+
+        //オブジェクトを探して取得する、スクロールバーを探して取得したい。
+        /*
+        GameObject target1 = GameObject.Find("Canvas");
+        GameObject target2 = target1.transform.Find("Panel");
+        scrollbar = target2.scrollbar.Find("scrollbar");
+        */
+
     }
 
     void Start()
@@ -43,8 +50,10 @@ public class Soundcont : MonoBehaviour
         scrollbar.value = audio.volume;
         Debug.Log("Scrollbarの現在の値: " + currentValue);
 
+
     }
 
+    //サウンドをスクロールバーで変更するためのプログラム
     public void OnChangeVolume()
     {
         Debug.Log("音量変更");
@@ -52,7 +61,7 @@ public class Soundcont : MonoBehaviour
         Debug.Log("Scrollbarの現在の値: " + currentValue);
         AudioSource audio = GetComponent<AudioSource>();
         audio.volume = currentValue;
-        
+
     }
 
 }
