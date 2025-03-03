@@ -23,7 +23,7 @@ public class SEstate : MonoBehaviour
     {
     }
 
-    /*public void ButtonClick()
+    public void ButtonClick()
     {
         button_AudioSource.PlayOneShot(button_AudioSource.clip);
 
@@ -33,9 +33,9 @@ public class SEstate : MonoBehaviour
         //鳴り始めたことを表示
         Debug.Log("開始");
         
-        yield return new WaitWhile(() => audioSource.isPlaying);
+        
 
-    }*/
+    }
 
 
 

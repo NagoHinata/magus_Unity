@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeOrganization : MonoBehaviour
 {
-    public void OnClick() // ターンエンドボタンにつける処理
+    public void OnClick() // ボタンにつける処理
     {
-        SceneManager.LoadScene("DeckOrganization");
+        SceneManager.LoadScene("OrganizingDeckSelection");
     }
 }

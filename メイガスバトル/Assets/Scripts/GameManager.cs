@@ -142,6 +142,7 @@ void Start()
 
         DrawCard(playerHand); // 手札を一枚ドローする
 
+        if (playerManaPoint < 20)
         playerManaPoint++; // ターン開始時マナを1増やす
         ShowManaPoint();   // マナの数字を表示する
     }
